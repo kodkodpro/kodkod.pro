@@ -2,6 +2,7 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   extends: [
     "plugin:astro/recommended",
+    "plugin:tailwindcss/recommended",
   ],
   rules: {
     "quotes": [
@@ -36,6 +37,7 @@ module.exports = {
         named: "never",
       },
     ],
+    "no-trailing-spaces": "error",
   },
   overrides: [
     {

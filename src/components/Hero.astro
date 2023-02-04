@@ -40,17 +40,17 @@ const logos = [
   },
 ]
 ---
-<h1 class="font-heading font-bold text-4xl mb-2 dark:text-white">
+<h1 class="font-heading mb-2 text-4xl font-bold dark:text-white">
   Обучение Full Stack Developer 🚀
 </h1>
-<p class="text-xl text-gray-500 mb-8">
+<p class="mb-8 text-xl text-gray-500">
   React, Next.js, TailwindCSS, Firebase, Astro, Stripe, Vercel, Tremor UI, TypeScript, PNPM
 </p>
 
-<div class="grid grid-cols-3 gap-x-4 gap-y-2 px-4 sm:gap-x-12 sm:px-8 sm:gap-y-4 md:gap-x-24 md:px-12 md:gap-y-8">
+<div class="grid grid-cols-3 gap-x-4 gap-y-2 px-4 sm:gap-x-12 sm:gap-y-4 sm:px-8 md:gap-x-24 md:gap-y-8 md:px-12">
   {logos.map((logo) => (
     <div class="flex items-center justify-center">
-      <Svg class={`${logo.class} w-full`} src={logo.import} />  
+      <Svg class={`${logo.class} w-full`} src={logo.import} />
     </div>
   ))}
 </div>

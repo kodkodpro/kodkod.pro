@@ -11,6 +11,7 @@ specifiers:
   astro: ^2.0.6
   eslint: ^8.33.0
   eslint-plugin-astro: ^0.23.0
+  eslint-plugin-tailwindcss: ^3.8.3
   tailwindcss: ^3.2.4
 
 dependencies:
@@ -27,6 +28,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.50.0_eslint@8.33.0
   eslint: 8.33.0
   eslint-plugin-astro: 0.23.0_eslint@8.33.0
+  eslint-plugin-tailwindcss: 3.8.3_tailwindcss@3.2.4
 
 packages:
 
@@ -1480,6 +1482,17 @@ packages:
       postcss-selector-parser: 6.0.11
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /eslint-plugin-tailwindcss/3.8.3_tailwindcss@3.2.4:
+    resolution: {integrity: sha512-wfzfCmc9yONNW+TqfR+QWZ+syFPQ8zMOrIGx500lS4XITEm0HJYGyKh1sC1tQ9+Wmt58bnHzW3Yc31vy5RlJww==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      tailwindcss: ^3.2.2
+    dependencies:
+      fast-glob: 3.2.12
+      postcss: 8.4.21
+      tailwindcss: 3.2.4
     dev: true
 
   /eslint-scope/5.1.1:
