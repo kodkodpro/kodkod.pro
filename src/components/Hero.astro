@@ -3,39 +3,39 @@ import Svg from "@jasikpark/astro-svg-loader"
 
 const logos = [
   {
-    path: "/images/logo-nextjs.svg?raw",
+    import: import("/images/logo-nextjs.svg?raw"),
     class: "text-slate-800 dark:text-slate-200",
   },
   {
-    path: "/images/logo-tailwindcss.svg?raw",
+    import: import("/images/logo-tailwindcss.svg?raw"),
     class: "text-slate-800 dark:text-slate-200",
   },
   {
-    path: "/images/logo-firebase.svg?raw",
+    import: import("/images/logo-firebase.svg?raw"),
     class: "fill-slate-800 dark:fill-slate-200",
   },
   {
-    path: "/images/logo-astro.svg?raw",
+    import: import("/images/logo-astro.svg?raw"),
     class: "text-slate-800 dark:text-slate-200",
   },
   {
-    path: "/images/logo-stripe.svg?raw",
+    import: import("/images/logo-stripe.svg?raw"),
     class: "",
   },
   {
-    path: "/images/logo-vercel.svg?raw",
+    import: import("/images/logo-vercel.svg?raw"),
     class: "text-slate-800 dark:fill-slate-200",
   },
   {
-    path: "/images/logo-tremor.svg?raw",
+    import: import("/images/logo-tremor.svg?raw"),
     class: "text-[#334155] dark:text-slate-200",
   },
   {
-    path: "/images/logo-typescript.svg?raw",
+    import: import("/images/logo-typescript.svg?raw"),
     class: "text-[#007acc] dark:text-sky-500",
   },
   {
-    path: "/images/logo-pnpm.svg?raw",
+    import: import("/images/logo-pnpm.svg?raw"),
     class: "text-slate-800 dark:text-slate-200",
   },
 ]
@@ -50,7 +50,7 @@ const logos = [
 <div class="grid grid-cols-3 gap-x-24 px-12 gap-y-8">
   {logos.map((logo) => (
     <div class="flex items-center justify-center">
-      <Svg class={logo.class} src={import(logo.path)} />  
+      <Svg class={logo.class} src={logo.import} />  
     </div>
   ))}
 </div>
