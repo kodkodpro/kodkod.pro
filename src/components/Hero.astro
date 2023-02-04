@@ -50,7 +50,7 @@ const logos = [
 <div class="grid grid-cols-3 gap-x-24 px-12 gap-y-8">
   {logos.map((logo) => (
     <div class="flex items-center justify-center">
-      <Svg class={logo.class} src={logo.import} />  
+      <Svg class:list={[logo.class, "w-full"]} src={logo.import} />  
     </div>
   ))}
 </div>
