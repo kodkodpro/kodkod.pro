@@ -15,7 +15,17 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="dark antialiased font-sans dark:bg-neutral-900 dark:text-neutral-400">
     <slot />
   </body>
 </html>
+
+<style is:global>
+  @font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

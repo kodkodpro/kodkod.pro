@@ -4,13 +4,17 @@ module.exports = {
     "plugin:astro/recommended",
   ],
   rules: {
-    quotes: [
+    "quotes": [
       "error",
       "double",
     ],
     "indent": [
       "error",
       2,
+    ],
+    "max-len": [
+      "error",
+      120,
     ],
     "comma-dangle": [
       "error",
@@ -19,6 +23,10 @@ module.exports = {
     "arrow-parens": [
       "error",
       "always",
+    ],
+    "semi": [
+      "error",
+      "never",
     ],
     "space-before-function-paren": [
       "error",
@@ -37,6 +45,7 @@ module.exports = {
         parser: "@typescript-eslint/parser",
         extraFileExtensions: [".astro"],
       },
+      rules: {},
     },
   ],
 }

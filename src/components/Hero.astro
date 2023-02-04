@@ -1,0 +1,56 @@
+---
+import Svg from "@jasikpark/astro-svg-loader"
+
+const logos = [
+  {
+    path: "/images/logo-nextjs.svg?raw",
+    class: "text-slate-800 dark:text-slate-200",
+  },
+  {
+    path: "/images/logo-tailwindcss.svg?raw",
+    class: "text-slate-800 dark:text-slate-200",
+  },
+  {
+    path: "/images/logo-firebase.svg?raw",
+    class: "fill-slate-800 dark:fill-slate-200",
+  },
+  {
+    path: "/images/logo-astro.svg?raw",
+    class: "text-slate-800 dark:text-slate-200",
+  },
+  {
+    path: "/images/logo-stripe.svg?raw",
+    class: "",
+  },
+  {
+    path: "/images/logo-vercel.svg?raw",
+    class: "text-slate-800 dark:fill-slate-200",
+  },
+  {
+    path: "/images/logo-tremor.svg?raw",
+    class: "text-[#334155] dark:text-slate-200",
+  },
+  {
+    path: "/images/logo-typescript.svg?raw",
+    class: "text-[#007acc] dark:text-sky-500",
+  },
+  {
+    path: "/images/logo-pnpm.svg?raw",
+    class: "text-slate-800 dark:text-slate-200",
+  },
+]
+---
+<h1 class="font-heading font-bold text-4xl mb-2 dark:text-white">
+  Обучение Full Stack Developer 🚀
+</h1>
+<p class="text-xl text-gray-500 mb-8">
+  React, Next.js, TailwindCSS, Firebase, Astro, Stripe, Vercel, Tremor UI, TypeScript, PNPM
+</p>
+
+<div class="grid grid-cols-3 gap-x-24 px-12 gap-y-8">
+  {logos.map((logo) => (
+    <div class="flex items-center justify-center">
+      <Svg class={logo.class} src={import(logo.path)} />  
+    </div>
+  ))}
+</div>

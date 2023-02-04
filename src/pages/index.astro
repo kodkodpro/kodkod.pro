@@ -1,9 +1,31 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Block from "../components/Block.astro"
+import Hero from "../components/Hero.astro"
+import Navbar from "../components/Navbar.astro"
+import Layout from "../layouts/Layout.astro"
+import { Content as Home } from "../content/home.mdx"
 ---
 
-<Layout title="Kodkod.Pro">
-  <main>
-    <h1>Hello, world!</h1>
+<Layout title="Kodkod Pro">
+  <main class="px-4">
+    <Block class="mb-8">
+      <Navbar />
+    </Block>
+    
+    <Block class="mb-12">
+      <Hero />
+    </Block>
+
+    <Block class="mb-24">
+      <div 
+        class="
+          prose dark:prose-invert prose-lg
+          prose-headings:font-heading prose-headings:font-bold prose-headings:mb-4 prose-headings:mt-16
+          prose-li:marker:font-medium prose-a:text-sky-500
+        "
+      >
+        <Home />
+      </div>
+    </Block>
   </main>
 </Layout>
