@@ -1,13 +1,49 @@
+import Tooltip from "../components/Tooltip.astro"
+
+export const tooltips = {
+  nextjs: (
+    <Tooltip label="Next.js 13">
+      Next.js 13 &mdash; последняя версия одного из самых популярных React фреймворков в мире.
+    </Tooltip>
+  ),
+  appDirectory: (
+    <Tooltip label="App Directory (beta)">
+      App Directory &mdash; ...
+    </Tooltip>
+  ),
+  serversideRendering: (
+    <Tooltip label="Serverside Rendering">
+      Serverside Rendering (SSR) &mdash; это метод генерации страниц на сервере, перед ее отправкой клиенту. Такой подход позволяет улучшить производительность и ускорить загрузку страницы для пользователей. Этот подход используется вместо Clientside Rendering, когда весь код выполняется в браузере пользователя.
+    </Tooltip>
+  ),
+  serverless: (
+    <Tooltip label="Serverless">
+      Serverless &mdash; это подход, который позволяет создавать приложения без сервера. Вместо этого используются специальные сервисы, которые позволяют запускать код на сервере при необходимости.
+    </Tooltip>
+  ),
+  firebase: (
+    <Tooltip label="Firebase от Google">
+      Firebase &mdash; это платформа для создания Serverless приложений, которая предоставляет множество инструментов. Такие как: база данных, аутентификация пользователей, хранение файлов, отправку уведомлений и многое другое.
+    </Tooltip>
+  ),
+  stripe: (
+    <Tooltip label="Stripe">
+      Stripe &mdash; это платежный сервис, который позволяет легко и безопасно принимать платежи в приложениях.
+    </Tooltip>
+  ),
+
+}
+
 # Как это работает?
-<span class="font-heading text-xl font-bold">**KodkodPro**</span> &mdash; это уникальная обучая программа, 
+<span class="font-heading text-xl font-bold">**KodkodPro**</span> &mdash; это уникальная обучая программа,
 построенная по принципу выпуска еженедельных видео.
 В процессе обучения мы с вами создадим аналог платформы Patreon
 с использованием самых современных технологий:
 
-1. Вы создатите проект на **Next.js 13** с использованием **App Directory** и **Serverside Rendering**
-1. Вы узнаете что такое **Serverless** и как его создать при помощи **Firebase от Google**
+1. Вы создатите проект на {tooltips.nextjs} с использованием {tooltips.appDirectory} и {tooltips.serversideRendering}
+1. Вы узнаете что такое {tooltips.serverless} и как его создать при помощи {tooltips.firebase}
 1. Вы научитесь создавать регистрацию пользователей при помощи **Firebase Auth** с возможность создавать аккаунты при помощи **Google**, **Facebook** и **Apple**
-1. Вы разработаете платежную систему для подписок при помощи **Stripe**
+1. Вы разработаете платежную систему для подписок при помощи {tooltips.stripe}
 1. Вы узнаете как создать прототип сайта в **Figma** и перенести его в приложение при помощи **Tailwind CSS** и **Headless UI**
 1. Вы научитесь работать с пользовательским контентом: постами, фото, видео, и др.
 1. Вы узнаете как создавать супер-быстрые сайты при помощи **Astro**
