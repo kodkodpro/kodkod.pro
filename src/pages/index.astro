@@ -2,12 +2,13 @@
 import Block from "../components/Block.astro"
 import Hero from "../components/Hero.astro"
 import Navbar from "../components/Navbar.astro"
+import EmailSubscribe from "../components/EmailSubscribe.astro"
 import Layout from "../layouts/Layout.astro"
 import { Content as Home } from "../content/home.mdx"
 ---
 
 <Layout title="Kodkod Pro">
-  <main class="px-4">
+  <main class="px-4 pb-24">
     <Block class="mb-8">
       <Navbar />
     </Block>
@@ -25,6 +26,10 @@ import { Content as Home } from "../content/home.mdx"
         "
       >
         <Home />
+      </div>
+
+      <div class="mt-12">
+        <EmailSubscribe />
       </div>
     </Block>
   </main>
