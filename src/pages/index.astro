@@ -5,9 +5,11 @@ import Navbar from "../components/Navbar.astro"
 import EmailSubscribe from "../components/EmailSubscribe.astro"
 import Layout from "../layouts/Layout.astro"
 import { Content as Home } from "../content/home.mdx"
+import TelegramSubscribe from "../components/TelegramSubscribe.astro"
+import HorizontalLine from "../components/HorizontalLine.astro"
 ---
 
-<Layout title="Kodkod Pro">
+<Layout title="Kodkod Pro" description="Hihihi">
   <main class="px-4 pb-24">
     <Block class="mb-8">
       <Navbar />
@@ -21,15 +23,30 @@ import { Content as Home } from "../content/home.mdx"
       <div
         class="
           prose dark:prose-invert prose-lg
-          prose-headings:font-heading prose-headings:font-bold prose-headings:mb-4 prose-headings:mt-16
-          prose-li:marker:font-medium prose-a:text-sky-500
+          prose-headings:font-serif prose-headings:font-bold
+          prose-h2:mb-4 prose-h2:mt-10 md:prose-h2:mt-16
+          prose-h2:text-3xl md:prose-h2:text-4xl
+          prose-h3:mt-6 md:prose-h3:mt-10 md:prose-h3:mb-0
+          prose-li:marker:font-semibold prose-a:text-sky-500
         "
       >
         <Home />
       </div>
 
-      <div class="mt-12">
-        <EmailSubscribe />
+      <div class="mb-12" />
+
+      <div class="mx-auto px-8 py-7 md:px-16 md:py-14 rounded-3xl bg-gray-50">
+        <h3 class="font-serif font-bold text-center text-4xl mb-8">
+          Подписаться на обновления
+        </h3>
+
+        <div>
+          <TelegramSubscribe />
+
+          <HorizontalLine label="или" class="my-6" />
+
+          <EmailSubscribe />
+        </div>
       </div>
     </Block>
   </main>
