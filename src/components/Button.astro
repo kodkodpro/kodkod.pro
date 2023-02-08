@@ -4,12 +4,16 @@ import type { HTMLAttributes } from 'astro/types'
 
 const variants = {
   default: {
-    wrapper: "bg-purple-500 hover:bg-purple-600 active:bg-purple-700 text-white hover:text-gray-100 active:text-gray-200",
-    icon: "text-white group-hover:text-gray-100 group-active:text-gray-200",
+    wrapper: "bg-purple-500 hover:bg-purple-600 active:bg-purple-700 text-white hover:text-neutral-100 active:text-neutral-200",
+    icon: "text-white group-hover:text-neutral-100 group-active:text-neutral-200",
   },
   telegram: {
-    wrapper: "bg-sky-500 hover:bg-sky-600 active:bg-sky-700 text-white hover:text-gray-100 active:text-gray-200",
-    icon: "text-white group-hover:text-gray-100 group-active:text-gray-200",
+    wrapper: "bg-sky-500 hover:bg-sky-600 active:bg-sky-700 text-white hover:text-neutral-100 active:text-neutral-200",
+    icon: "text-white group-hover:text-neutral-100 group-active:text-neutral-200",
+  },
+  patreon: {
+    wrapper: "bg-red-500 hover:bg-red-600 active:bg-red-700 text-white hover:text-neutral-100 active:text-neutral-200",
+    icon: "text-white group-hover:text-neutral-100 group-active:text-neutral-200",
   },
 }
 
@@ -35,7 +39,7 @@ const {
 <button
   {...props}
   class:list={[
-    "font-medium px-6 py-4 md:text-xl rounded-lg w-full flex items-center justify-center gap-2 group",
+    "font-semibold px-6 py-4 md:text-xl rounded-lg w-full flex items-center justify-center gap-2 group",
     variants[variant].wrapper,
     className,
   ]}

@@ -7,9 +7,13 @@ import Layout from "../layouts/Layout.astro"
 import { Content as Home } from "../content/home.mdx"
 import TelegramSubscribe from "../components/TelegramSubscribe.astro"
 import HorizontalLine from "../components/HorizontalLine.astro"
+import Button from "../components/Button.astro"
+import Sidebar from "../components/Sidebar.astro"
 ---
 
 <Layout title="Kodkod Pro" description="Hihihi">
+  <!-- <Sidebar /> -->
+
   <main class="px-4 pb-24">
     <Block class="mb-8">
       <Navbar />
@@ -19,7 +23,7 @@ import HorizontalLine from "../components/HorizontalLine.astro"
       <Hero />
     </Block>
 
-    <Block>
+    <Block class="sm:mb-12">
       <div
         class="
           prose dark:prose-invert prose-lg
@@ -35,8 +39,12 @@ import HorizontalLine from "../components/HorizontalLine.astro"
 
       <div class="mb-12" />
 
-      <div class="mx-auto px-8 py-7 md:px-16 md:py-14 rounded-3xl bg-gray-50">
-        <h3 class="font-serif font-bold text-center text-4xl mb-8">
+      <Button variant="patreon" class="py-8">🚀 Начать обучение на Patreon</Button>
+
+      <div class="mb-12" />
+
+      <div class="mx-auto px-8 py-7 md:px-16 md:pt-12 md:pb-14 rounded-3xl bg-neutral-50 dark:bg-neutral-800">
+        <h3 class="font-serif font-bold text-center text-4xl mb-8 dark:text-neutral-200">
           Подписаться на обновления
         </h3>
 

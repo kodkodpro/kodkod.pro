@@ -8,7 +8,9 @@ const { label, class: className }: Props = Astro.props
 ---
 
 <div class:list={["flex items-center gap-x-2", className]}>
-  <div class="border-b flex-1" />
-  <div class="text-gray-400 text-xs font-semibold uppercase">{label}</div>
-  <div class="border-b flex-1" />
+  <div class="border-b dark:border-neutral-700 flex-1" />
+  <div class="text-neutral-400 dark:text-neutral-500 text-xs font-semibold uppercase">
+    {label}
+  </div>
+  <div class="border-b dark:border-neutral-700 flex-1" />
 </div>
