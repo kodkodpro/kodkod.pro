@@ -17,6 +17,17 @@ const variants = {
   },
 }
 
+const sizes = {
+  default: {
+    wrapper: "px-6 py-4 md:text-xl",
+    icon: "w-6 h-6"
+  },
+  small: {
+    wrapper: "px-4 py-2 md:text-base",
+    icon: "w-4 h-4"
+  },
+}
+
 const icons = {
   envelope: import("/icons/envelope.svg?raw"),
   telegram: import("/icons/telegram.svg?raw"),
@@ -24,12 +35,14 @@ const icons = {
 
 type Props = {
   variant?: keyof typeof variants
+  size?: keyof typeof sizes
   icon?: keyof typeof icons
   class?: string
 } & HTMLAttributes<"button">
 
 const {
   variant = "default",
+  size = "default",
   icon,
   class: className,
   ...props
@@ -39,12 +52,18 @@ const {
 <button
   {...props}
   class:list={[
-    "font-semibold px-6 py-4 md:text-xl rounded-lg w-full flex items-center justify-center gap-2 group",
+    "font-semibold rounded-lg w-full flex items-center justify-center gap-2 group",
     variants[variant].wrapper,
+    sizes[size].wrapper,
     className,
   ]}
 >
-  {icon && <Svg src={icons[icon]} class={`w-6 h-6 ${variants[variant].icon}`} />}
+  {icon && (
+    <Svg
+      src={icons[icon]}
+      class={`w-6 h-6 ${variants[variant].icon} ${sizes[size].icon}`}
+    />
+  )}
 
   <span class="whitespace-nowrap">
     <slot />

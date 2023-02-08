@@ -9,53 +9,58 @@ import TelegramSubscribe from "../components/TelegramSubscribe.astro"
 import HorizontalLine from "../components/HorizontalLine.astro"
 import Button from "../components/Button.astro"
 import Sidebar from "../components/Sidebar.astro"
+import ActionButton from "../components/ActionButton.astro"
 ---
 
 <Layout title="Kodkod Pro" description="Hihihi">
-  <!-- <Sidebar /> -->
+  <div class="xl:container relative mx-auto">
+    <!-- <Sidebar /> -->
 
-  <main class="px-4 pb-24">
-    <Block class="mb-8">
-      <Navbar />
-    </Block>
+    <main class="px-4 pb-24">
+      <Block class="mb-8 sm:mb-16">
+        <Navbar />
+      </Block>
 
-    <Block class="sm:mb-12">
-      <Hero />
-    </Block>
+      <Block class="mb-8 sm:mb-16">
+        <Hero />
+      </Block>
 
-    <Block class="sm:mb-12">
-      <div
-        class="
-          prose dark:prose-invert prose-lg
-          prose-headings:font-serif prose-headings:font-bold
-          prose-h2:mb-4 prose-h2:mt-10 md:prose-h2:mt-16
-          prose-h2:text-3xl md:prose-h2:text-4xl
-          prose-h3:mt-6 md:prose-h3:mt-10 md:prose-h3:mb-0
-          prose-li:marker:font-semibold prose-a:text-sky-500
-        "
-      >
-        <Home />
-      </div>
-
-      <div class="mb-12" />
-
-      <Button variant="patreon" class="py-8">🚀 Начать обучение на Patreon</Button>
-
-      <div class="mb-12" />
-
-      <div class="mx-auto px-8 py-7 md:px-16 md:pt-12 md:pb-14 rounded-3xl bg-neutral-50 dark:bg-neutral-800">
-        <h3 class="font-serif font-bold text-center text-4xl mb-8 dark:text-neutral-200">
-          Подписаться на обновления
-        </h3>
-
-        <div>
-          <TelegramSubscribe />
-
-          <HorizontalLine label="или" class="my-6" />
-
-          <EmailSubscribe />
+      <Block class="mb-8 sm:mb-12">
+        <div
+          class="
+            prose dark:prose-invert prose-lg
+            prose-headings:font-serif prose-headings:font-bold
+            prose-h2:mb-4 prose-h2:mt-10 md:prose-h2:mt-16
+            prose-h2:text-3xl md:prose-h2:text-4xl
+            prose-h3:mt-6 md:prose-h3:mt-10 md:prose-h3:mb-0
+            prose-li:marker:font-semibold prose-a:text-sky-500
+          "
+        >
+          <Home />
         </div>
-      </div>
-    </Block>
-  </main>
+
+        <div class="mb-12" />
+
+        <Button variant="patreon" class="py-8">🚀 Начать обучение на Patreon</Button>
+
+        <div class="mb-12" />
+
+        <div class="mx-auto px-8 py-7 md:px-16 md:pt-12 md:pb-14 rounded-3xl bg-neutral-50 dark:bg-neutral-800">
+          <h3 class="font-serif font-bold text-center text-4xl mb-8 dark:text-neutral-200">
+            Подписаться на обновления
+          </h3>
+
+          <div>
+            <TelegramSubscribe />
+
+            <HorizontalLine label="или" class="my-6" />
+
+            <EmailSubscribe />
+          </div>
+        </div>
+      </Block>
+    </main>
+
+    <!-- <ActionButton /> -->
+  </div>
 </Layout>

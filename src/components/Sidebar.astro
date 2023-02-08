@@ -1,4 +1,7 @@
 ---
+import Button from "./Button.astro";
+import TextGradient from "./TextGradient.astro";
+
 const items = [
   {
     name: "Как это работает",
@@ -6,19 +9,19 @@ const items = [
   },
   {
     name: "Что вы создадите",
-    link: "#️-что-вы-создадите"
+    link: "#-что-вы-создадите"
   },
   {
     name: "Закрытое комьюнити",
-    link: "#️-закрытое-комьюнити"
+    link: "#-закрытое-комьюнити"
   },
   {
     name: "Для кого подойдет это обучение",
-    link: "#️-для-кого-подойдет-это-обучение",
+    link: "#-для-кого-подойдет-это-обучение",
   },
   {
     name: "Что вам нужно знать перед началом обучения",
-    link: "#️-что-вам-нужно-знать-перед-началом-обучения",
+    link: "#-что-вам-нужно-знать-перед-началом-обучения",
   },
   {
     name: "Примеры уроков",
@@ -26,29 +29,46 @@ const items = [
   },
   {
     name: "Плюсы и минусы подписки",
-    link: "#️-плюсы-и-минусы-подписки",
+    link: "#-плюсы-и-минусы-подписки",
   },
   {
     name: "Об авторе",
-    link: "#️-об-авторе",
+    link: "#-об-авторе",
   },
   {
     name: "Стиль преподавания",
-    link: "#️-стиль-преподавания",
+    link: "#-стиль-преподавания",
   },
   {
     name: "Частые вопросы",
-    link: "#️-частые-вопросы",
+    link: "#-частые-вопросы",
   }
 ]
 ---
 
-<div class="sticky left-0 top-0">
-  <ul>
-    {items.map((item) => (
-      <li>
-        <a href={item.link}>{item.name}</a>
-      </li>
-    ))}
-  </ul>
+<div class="hidden xl:block fixed top-1/2 -translate-y-1/2 w-72">
+  <div class="p-4">
+    <h3 class="font-serif font-bold text-2xl mb-2">Содержание</h3>
+
+    <ul class="space-y-2 leading-none list-decimal list-inside marker:text-xs marker:font-semibold marker:text-neutral-500 mb-8">
+      {items.map((item) => (
+        <li>
+          <a
+            href={item.link}
+            class="text-sm font-semibold text-sky-500 hover:underline hover:text-sky-600 active:text-sky-700"
+          >
+            {item.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <Button class="mb-1">
+      Узнать о запуске
+    </Button>
+
+    <p class="text-center font-semibold">
+      <TextGradient>50% скидка для первых 50 подписчиков</TextGradient>
+    </p>
+  </div>
 </div>

@@ -1,6 +1,29 @@
-<div class="flex flex-row">
-  <a href="/" class="font-serif flex py-4 text-3xl font-bold">
-    <span class="dark:text-white">🧑‍💻 kodkod</span>
-    <span class="text-purple-500">pro</span>
+---
+import Button from "./Button.astro";
+import TextGradient from "./TextGradient.astro";
+---
+
+<!-- Just show logo on mobile -->
+<div class="sm:hidden py-4 text-center">
+  <a href="/" class="font-serif text-3xl font-bold">
+    <span class="dark:text-white">🧑‍💻 kodkod</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">pro</span>
   </a>
 </div>
+
+<div class="hidden sm:flex fixed xl:relative top-0 left-1/2 -translate-x-1/2 w-full max-w-prose flex-row items-center pt-4 pb-16 xl:pb-4 z-10 bg-gradient-to-b from-white via-white to-transparent">
+  <a href="/" class="font-serif flex text-3xl font-bold">
+    <span class="dark:text-white">🧑‍💻 kodkod</span>
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">pro</span>
+  </a>
+
+  <div class="ml-auto xl:hidden">
+    <Button size="small">
+      Узнать о запуске
+    </Button>
+    <p class="text-xs text-center font-semibold">
+      <TextGradient>50% скидка для первых 50 подписчиков</TextGradient>
+    </p>
+  </div>
+</div>
+
+<div class="h-24 hidden sm:block xl:hidden" />

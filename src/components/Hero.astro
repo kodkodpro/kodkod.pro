@@ -1,5 +1,6 @@
 ---
 import Svg from "@jasikpark/astro-svg-loader"
+import TextGradient from "./TextGradient.astro";
 
 const logos = [
   {
@@ -40,12 +41,17 @@ const logos = [
   },
 ]
 ---
-<h1 class="font-serif mb-2 text-4xl font-bold dark:text-white">
-  Обучение Full Stack <span class="whitespace-nowrap">Development 🚀</span>
-</h1>
-<p class="mb-8 text-xl text-neutral-500">
-  React, Next.js, TailwindCSS, Firebase, Astro, Stripe, Vercel, Tremor UI, TypeScript, PNPM
-</p>
+<div class="text-center">
+  <h1 class="font-serif mb-2 text-4xl font-bold">
+    <TextGradient>
+      Обучение Full Stack
+      <span class="whitespace-nowrap">Development 🚀</span>
+    </TextGradient>
+  </h1>
+  <p class="mb-8 text-xl text-neutral-500">
+    React, Next.js, TailwindCSS, Firebase, Astro, Stripe, Vercel, Tremor UI, TypeScript, PNPM
+  </p>
+</div>
 
 <div class="grid grid-cols-3 gap-x-4 gap-y-2 px-4 sm:gap-x-12 sm:gap-y-4 sm:px-8 md:gap-x-24 md:gap-y-8 md:px-12 mb-12">
   {logos.map((logo) => (
